@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>My Angular App!</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <div ng-controller="MainCtrl">
+        <h2>Information from David's server</h2>
+          <div ng-repeat="urlCollection in urls">
+            <div ng-repeat="urlObjects in urlCollection">
+              <div ng-repeat="url in urlObjects">
+                <p> {{url}} </p>
+              </div>
+            </div>
+         </div>
+    </div>
+
+  </body>
+</html>
